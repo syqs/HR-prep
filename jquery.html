@@ -1,6 +1,9 @@
 <html>
 <head>
   <title>HTML Document</title>
+  <style>
+  li:hover{background-color: #c4c4c4;}
+  </style>
 </head>
 <body>
 <div id="everything">
@@ -16,22 +19,29 @@
       </div>
       <div class="holder">
           <ol>
-              <li>List Item 4</li>
-              <li>List Item 5</li>
+              <li start="some">List Item 4</li>
+              <li start="list item 5">List Item 5</li>
               <li>List Item 6</li>
           </ol>
       </div>
       <div id="change-me">This part needs to change!</div>
       <div id="secret">We should hide this!</div>
   </div>
-  <script>
-  var a = 4;
-  console.log(a)
-
-
-  </script>
   <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
   <script>
+  var userInput ={};
+  $(document).ready(function(){
+    $('li').click(function(){
+      userInput.first = prompt("hej senior put some stuff here");
+
+      if (typeof this.attributes.start != "undefined") {
+                        userInput.second = this.attributes.start.value;
+      }else{
+
+            userInput.second =  this.childNodes;
+      }
+    });
+
     $('body').css('background-color', 'red');
     $('img').attr('src','http://i.imgur.com/nWGCwiE.gif');
     $('.holder').css('border','1px solid black')
@@ -44,11 +54,10 @@
     $('#change-me').append(' newer sentance')
     $('#change-me').append('<p> el paragrafo</p>')
     $('#change-me').append('<p> el paragrafo 2</p>')
-    $('#change-me').append('<p> el paragrafo no 3</p>')
-
+    $('#change-me').append('<p> el paragrafo numero 3</p>')
     $('#notification').html('<div class="alert">Hold on! <b>an error</b> has occured!</p>');
     $('.container').append("<p>What's the difference between <i>.append()</i> and .html()?</p>");
-
+  });
 
   </script>
 </body>
