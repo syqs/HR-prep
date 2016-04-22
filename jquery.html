@@ -47,7 +47,7 @@
     //   }
     // }
 
-    var input, userColor = "",lighterColor,darkerColor,light1;
+    var input, userColor = "",lighterColor,darkerColor,light1 = [], array =[];
     var token = true;
   //  var brightRed = new RGBColour(255, 0, 0); //this is wronk!
 
@@ -67,37 +67,49 @@
 
 
     while(token === true){
-       input = prompt("pick a color");
-       var something = input.split(' ',3)
+        input = prompt("pick a color");
+        something = input.split(',',3)
+        console.log('something',something)
+        light1 = something;
 
-        if  (typeof(something) === "object" ) {
-          // light1 = something;
-          // console.log('this is',light1[0])
-          // lighterColor = rgbToHex(light1['0'],something['1'],something['2'])
-          console.log(lighterColor,userColor)
-          userColor = rgbToHex(something['0'],something['1'],something['2'])
-
-          $('body').css('background-color', userColor);
-          $('body').css('color', lighterColor);
-          console.log(userColor)
+        if (parseInt(something['0'])>parseInt(something['1']) && parseInt(something['0']) > parseInt(something ['2'] )) {
+          array.push(parseInt(light1['0']) )
+          array.push(parseInt(light1['1'])+ 40)
+          array.push(parseInt(light1['2'])+ 40)
+          console.log(' red  ')
+        }else if(array['1']>array['0'] && array['1'] > array['2'] ){
+          array.push(parseInt(light1['0'])+ 40)
+          array.push(parseInt(light1['1']))
+          array.push(parseInt(light1['2'])+ 40)
+          console.log(' green  ')
+        }else if(array['2']>array['0'] && array['2'] > array['1'] ){
+          array.push(parseInt(light1['0'])+ 40)
+          array.push(parseInt(light1['1'])+ 40)
+          array.push(parseInt(light1['2']))
+          console.log(' blue  ')
         }
+
+        userColor = rgbToHex(something['0'],something['1'],something['2'])
+        lighterColor = rgbToHex(light1['0'],light1['1'],light1['2'])
+        darkerColor = rgbToHex(array['0'],array['1'],array['2'])
+
+        $('body').css('background-color', userColor);
+        $('body').css('color', darkerColor);
+
 
         if (input === "red" || input === "green" || input === "blue"){
           if (input == "blue") {
             $('body').css('background-color','blue')
-            $('body').css('color', userColor || blue)
+            $('body').css('color', userColor || 'blue')
             break;
           }
         } else{
           // console.log("it works");
-
           token = false;
-
         }
 
       }
-
-});
+    });
 
 // var color;  //red, white, blue
 //
