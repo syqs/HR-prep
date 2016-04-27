@@ -4,34 +4,114 @@
 	<title>Day2</title>
 	<script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
 </head>
+<style>
+	.highlight{	background-color:red;}
+	.clicked{background-color: #c3c3c3;}
+	#target{width:600px;height:600px; background-image: url('Margaret_Hamilton.gif')}
+	#pups{position:fixed;}
+	body{cursor:hand;}
+</style>
 <body>
-<div>Show me the money</div>
-<div>Show me the Oprah</div>
-<div>Show me the Opera</div>
+<div id="target" class="highlight" >
+	<div id="output">Show me the money</div>
+	<div id="text">
+		<p id="p1">Show me the Oprah</p>
+		<p id="p2">Show me the Oprah</p>
+		<p id="p3">Show me the Oprah</p>
+		<p id="p4">Show me the Oprah</p>
+		<p id="p5">Show me the Oprah</p>
+		<input id="color" value='red'>
+		<label></label>
+		<input id="type" value=''>
+		<button id="go">le click</button>
+	</div>
+	<div id="magic">Dont hover here</div>
+	<div id="pups"><img src="https://media.giphy.com/media/EluU7gfNc99QI/giphy.gif"></div>
+</div>
 <script>
-
-$('div').click(function() {
-			//check to see if item has already been shown
-			if ($(this).hasClass('clickedOn')) {
-				//if yes then hide
-				$(this).toggle('slow')
-			}
-			//remove all teh classnames from divs
-			$('div').each(function(i){
-				this.className = '';
-			})
-			//add clickedOn class to the div that is being clicked on
-			$(this).addClass('clickedOn')
-
-			//check what div has class clickedOn and toggle the others
-			$('div').each(function(i){
-				if (this.className === 'clickedOn'){
-					//do nothing
-				}else{
-							$(this).toggle('slow')
-				}
-		})
+// deny access to the input fields
+$('input').focus(function(){
+	$(this).blur();
 })
+
+//focus on the input box when doc loaded
+$(document).ready(function() {
+  $('input#type').focus();
+});
+// var nsa_surveillance = ""
+// $('input#type').on('keypress', function (e) {
+//   $('label').text(String.fromCharCode(e.keyCode));
+// });
+//
+// $('body').on('keypress', function(e){
+//   $('label').text(String.fromCharCode(e.keyCode));
+// 	nsa_surveillance += String.fromCharCode(e.keyCode)
+// });
+
+
+//	Background color selector
+// $('button#go').on('click', function(){
+
+  // $('#output').text( $('input#color').val() );
+	// $('body').css('background-color', $('input#color').val())
+// });
+
+
+
+// // Selected p UI
+// $('p').each(function(i){
+// 	$(this).click(function(){
+// 		$('#output').text(this.id)
+// 		$('p').removeClass();
+// 		$(this).toggleClass('clicked')
+// 	})
+// })
+
+
+//	Margaret and the dog
+// $('#magic').hover(function(){
+// 		$('#target').css('background-image','url()')
+// 		$('#target').append().html("<h1>Margaret Hamilton standing next to listings of the Apollo Guidance Computer (AGC) source code</h1>")
+// })
+//
+// var inspecto;
+// var mouse_tracker = function(event){
+//   console.log(event.offsetY, event.offsetX, event.pageX, event.pageY, !!event.which);
+// 	if(!!event.which){
+// 		$('#pups').css('top',event.pageY);
+// 		$('#pups').css('left',event.pageX);
+// 	}
+//
+// 	inspecto = event;
+// };
+//
+// $('body').on('mousemove', mouse_tracker);
+
+
+
+// // show me the divs function
+// $('div').click(function() {
+// 			//check to see if item has already been shown
+// 			if ($(this).hasClass('clickedOn')) {
+// 				//if yes then hide
+// 				$(this).toggle('slow')
+// 			}
+// 			//remove all teh classnames from divs
+// 			$('div').each(function(i){
+// 				this.className = '';
+// 			})
+// 			//add clickedOn class to the div that is being clicked on
+// 			$(this).addClass('clickedOn')
+//
+// 			//check what div has class clickedOn and toggle the others
+// 			$('div').each(function(i){
+// 				if (this.className === 'clickedOn'){
+// 					//do nothing
+// 				}else{
+// 							$(this).toggle('slow')
+// 				}
+// 		})
+// })
 
 	// var div1 = $( "div:contains('Show me the Oprah')").text(),
 	// 		div2 = $( "div:contains('Show me the Opera')").text(),
@@ -70,30 +150,6 @@ $('div').click(function() {
 	// }
 	//
 	// showHide();
-
-/*$( document.body ).click(function() {
-  $( "div" ).each(function( i ) {
-    if ( this.text == "Show me the money" ) {
-      this.text = "The money is shown";
-
-
-    } else {
-
-    }
-  });
-});
-*/
-/*showHide();
-
-$( document.body ).click(function() {
-  $( "div" ).each(function( i ) {
-    if ( opera !== 'Show me the Oprah') {
-      .hide()
-    } else {
-      this.style.color = "";
-    }
-  });
-});*/
 
 </script>
 </body>
