@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+</head>
+<body>
+<div id="output">
+</div>
+<script>
+var returned_values = [];
+
+function log_and_return(){
+  for(var i in arguments){
+    returned_values.push(arguments[i]);
+    console.log(returned_values)
+  }
+
+}
+log_and_return('one', 'two', 'tree', "fi", "fo");
+log_and_return(returned_values)
+
+
+
+// function name(){
+//   var greet = ("Hello" + new Date());
+//   $('#output').append('<p>'+greet+'</p>')
+//   }
+//   name();
+
+
+
+// function randWords(){
+//   if (Math.random()<0.5) {
+//     return "word1 "
+//   }else if(Math.random()>=0.5){
+//     return "word2 "
+//   }else{
+//     return "word3 "
+//   }
+// }
+//
+// function getSentence(){
+//   var i=0
+//   var new_sentence = ""
+//   while(i < 10){
+//     new_sentence += randWords();
+//     i++;
+//   };
+//   return $('#output').append('<p>'+ new_sentence +'</p>');
+// };
+// getSentence()
+
+
+</script>
+</body>
+<footer>
+
+</footer>
+</html>

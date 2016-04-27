@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Day2</title>
+	<script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+</head>
+<body>
+<div>Show me the money</div>
+<div>Show me the Oprah</div>
+<div>Show me the Opera</div>
+<script>
+
+$('div').click(function() {
+			//check to see if item has already been shown
+			if ($(this).hasClass('clickedOn')) {
+				//if yes then hide
+				$(this).toggle('slow')
+			}
+			//remove all teh classnames from divs
+			$('div').each(function(i){
+				this.className = '';
+			})
+			//add clickedOn class to the div that is being clicked on
+			$(this).addClass('clickedOn')
+
+			//check what div has class clickedOn and toggle the others
+			$('div').each(function(i){
+				if (this.className === 'clickedOn'){
+					//do nothing
+				}else{
+							$(this).toggle('slow')
+				}
+		})
+})
+
+	// var div1 = $( "div:contains('Show me the Oprah')").text(),
+	// 		div2 = $( "div:contains('Show me the Opera')").text(),
+	// 		div3 = $( "div:contains('Show me the money')").text(),
+	// 		money,
+	// 		opera,
+	// 		oprah=true;
+	//
+	// function showHide() {
+	// 	// if statement 1st div equal something
+	// 	//  set boolean
+	// 	$( "div:contains('Show me the money')" ).click(function(){
+	// 			$('#target').toggle("slow", function() {
+	// 				if (oprah ===true){
+	// 				$('#target').show().css('color', 'red').text('The money is shown');
+	// 				oprah = false
+	// 			}else{
+	// 				$('#target').show().css('color', 'red').text('Show me the money');
+	// 				oprah = true;
+	// 			}
+	// 			});
+	// 			$( "div:contains('Show me the Oprah')").toggle();
+	// 			$( "div:contains('Show me the Opera')").toggle();
+	// 	});
+	//
+	// 	$( "div:contains('Show me the Oprah')" ).click(function(){
+	// 		$( "div:contains('Show me the Oprah')").text('Oprah is shown!');
+	//
+	// 	});
+	//
+	// 	$( "div:contains('Show me the Opera')" ).click(function(){
+	// 		$( "div:contains('Show me the Opera')").css('font-size','20px').text('Oprah is shown!');
+	//
+	// 	});
+	//
+	// }
+	//
+	// showHide();
+
+/*$( document.body ).click(function() {
+  $( "div" ).each(function( i ) {
+    if ( this.text == "Show me the money" ) {
+      this.text = "The money is shown";
+
+
+    } else {
+
+    }
+  });
+});
+*/
+/*showHide();
+
+$( document.body ).click(function() {
+  $( "div" ).each(function( i ) {
+    if ( opera !== 'Show me the Oprah') {
+      .hide()
+    } else {
+      this.style.color = "";
+    }
+  });
+});*/
+
+</script>
+</body>
+</html>

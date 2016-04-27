@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+</head>
+<body>
+<div id="output">
+</div>
+<script>
+
+function pick(){
+  return Math.ceil(Math.random()*4);
+}
+
+function funnySentence() {
+  //initialize words object
+  var words = {
+    'noun4': 'batman',
+    'noun1': 'sir Codesalot',
+    'noun2': 'cavern dwelling tree',
+    'noun3': 'stronk female UX lead',
+    'verb4': 'ramified',
+    'verb1': 'directly observed',
+    'verb2': 'indubitably mistified',
+    'verb3': 'gung fu-ed beyond recognition',
+    'ad4': 'sparkling',
+    'ad1': 'lacklustered',
+    'ad2': 'obvious',
+    'ad3': 'inconspicuous'
+  }
+  var noun,verb,ad,sentence,stringy;
+
+  if (pick()===1){
+    noun = words.noun1;
+    verb = words.verb2;
+    ad = words.ad3;
+  }else if (pick()===2){
+    noun = words.noun2;
+    verb = words.verb3;
+    ad = words.ad4;
+  }else if (pick()===3){
+    noun = words.noun3;
+    verb = words.verb4;
+    ad = words.ad1;
+  }else {
+    noun = words.noun4;
+    verb = words.verb1;
+    ad = words.ad2;
+  }
+
+  sentence = "long ago in a distant land a "+noun+" was "+verb+" while searching for the " +ad+ " crown of epic timetraveleness";
+  string_printer(sentence);
+}
+ var string_printer = function (stringy){
+   $('#output').append(document.createElement('p'));
+   $('p').text(stringy);
+ }
+
+//
+// var tripler = function (num){
+//   return num*3;
+// };
+// var multiply = function(num,num2){
+//   return num * num2;
+// };
+// var devide = function(num, num2){
+//   return num/num2;
+// };
+// var remainder = function(num,num2){
+//   return num%num2;
+// };
+// console.log(remainder(3,devide(2,multiply(12,tripler(20)))));
+// console.log(remainder(87,devide(8,multiply(8,tripler(5)))));
+// console.log(remainder(885,devide(2,multiply(8,multiply(278,23232)))));
+// console.log(devide(5,devide(2,multiply(12,devide(20,10)))));
+// console.log(remainder(388,devide(27,multiply(1,tripler(0)))));
+//
+// var test = 0;
+// // test = multiply(12,tripler(5))
+// // test = devide(test,2)
+// test = remainder(20,8)
+// console.log(test)
+
+// var returned_values = [];
+//
+// function log_and_return(){
+//   for(var i in arguments){
+//     returned_values.push(arguments[i]);
+//     console.log(returned_values)
+//   }
+//
+// }
+// log_and_return('one', 'two', 'tree', "fi", "fo");
+// log_and_return(returned_values)
+
+
+
+// function name(){
+//   var greet = ("Hello" + new Date());
+//   $('#output').append('<p>'+greet+'</p>')
+//   }
+//   name();
+
+
+
+// function randWords(){
+//   if (Math.random()<0.5) {
+//     return "word1 "
+//   }else if(Math.random()>=0.5){
+//     return "word2 "
+//   }else{
+//     return "word3 "
+//   }
+// }
+//
+// function getSentence(){
+//   var i=0
+//   var new_sentence = ""
+//   while(i < 10){
+//     new_sentence += randWords();
+//     i++;
+//   };
+//   return $('#output').append('<p>'+ new_sentence +'</p>');
+// };
+// getSentence()
+
+
+</script>
+</body>
+<footer>
+
+</footer>
+</html>
