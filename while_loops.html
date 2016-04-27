@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.odd {font-size:20px;width:200px;background-color:black;color: white;}
+.Fizz{width:100px;background-color: blue};
+.Buzz{width:100px;background-color: red};
+.FizzBuzz{width:200px;border:1px solid gray};
+
+</style>
+</head>
+<body>
+  <div id="message">
+    <p>message lll</p>
+  </div>
+
+  <script>
+    // Drinking song
+    // var n = 100, song='<ul class="message">';
+    // while (n >= 0) {
+    //   if (n !== 0) {
+    //     song = song + '<li>' + n + " bottle"+ (n===1 ? '' : 's')
+    //      + " of sake on the wall! campai</li>";
+    //   }else{
+    //     song+="<li>no bottles of sake left :(</li>"
+    //   }
+    //   n--;
+    // }
+    // song += '</ul>';
+    // document.querySelector('#message').innerHTML = song;
+
+    // Exercise: Fencepost Loop
+    // var n = 10, result="", i=0;
+    // while (i <= n) {
+    //     result +='<p class='+(i % 2 === 0 ? 'even':'odd')+'>'+ i + ((i===n) ?' ':',')+'</p>';
+    //     i++;
+    // }
+    //
+    // document.querySelector('#message').innerHTML = result;
+
+    // Cumulative Sum
+    //  var n = 7, i = 1, product=1, exp =' is the product of numbers ';
+    //  while (i<=n) {
+    //    product *= i;
+    //    exp += i + ( i===n?'':"*" ) ;
+    //    i++
+    //  }
+    // document.querySelector('#message').innerHTML = product + exp;
+
+
+    // Possibly refractored version
+    // var n = 0;
+    // while ( n <= 20 ) {
+    //   if (n == 13) {
+    //     console.log("la-la-la, nothing to say here");
+    //   }else {
+    //     if(n%2===0){
+    //        console.log("I like the number " + n + ", a nice even number.");
+    //     }else{
+    //       console.log("I like the number " + n + ", odd is okay too!");
+    //     }
+    //   }
+    //   n++;
+    // }
+
+    // FizzBuzz
+    // var i = 0, line=' ';
+    // while (i <= 100) {
+    //   if ((i%3===0) && (i%5===0)){
+    //     line += '<div class="FizzBuzz">'+i+'</div>';
+    //   }else if(i%5===0){
+    //     line += '<div class="Buzz">'+i+'</div>';
+    //   }else if (i%3===0) {
+    //    line += '<div class="Fizz">'+i+'</div>';
+    //   }else{
+    //     line += '<div>'+i+'</div>';
+    //   }
+    //   i++
+    // }
+    // document.querySelector('#message').innerHTML = line;
+
+    // Exercise numbers party
+    // var i = 1, j=1, n=5, meet='';
+    // while (i<=n) {
+    //   if (i===1){
+    //     console.log('wellcome',i);
+    //   }else{
+    //     while(j<n){
+    //       if (j==1) {
+    //         meet += ' meet '+ j;
+    //       }else{
+    //         meet += ' and ' + j;
+    //       }
+    //       console.log('wellcome',j+1,meet);
+    //
+    //       j++;
+    //     }
+    //   }
+    //   i++;
+    // }
+
+
+
+    //Rock paper scissors
+    // var userChoice, computerChoice;
+    // userChoice = prompt('enter R P or S to play')
+    // if ( userChoice!=='R' && userChoice!=='P' && userChoice!=='S' ){
+    //     alert('please instert proper input');
+    // }else {
+    //   var ran = Math.random();
+    //   if (ran <=0.3) {
+    //     computerChoice = 'R';
+    //   }else if (ran <=0.6){
+    //     computerChoice = 'P';
+    //   }else{
+    //     computerChoice = 'S';
+    //   }
+    // alert('chosen ' + userChoice + ' and computer has chosen '+ computerChoice );
+    //
+    // }
+
+
+    // Guess a number
+    // var n = parseInt(prompt('please input celing number'));
+    // while (isNaN(n)) {
+    //   n = prompt('actual number please');
+    //   parseInt(n);
+    // };
+    // var rNum = Math.floor( Math.random()* n);
+    // console.log(rNum);
+    // var guess = parseInt(prompt('please guess the number now'));
+    // while (isNaN(guess)) {
+    //   guess = prompt('actual number please');
+    //   parseInt(guess);
+    // };
+    //
+    // while (guess !== rNum) {
+    //   if (guess == rNum) {
+    //     break;
+    //   } else if (guess < rNum) {
+    //     guess = prompt('a little bit too low, try again');
+    //     parseInt(guess);
+    //   } else if (guess > rNum) {
+    //     guess = prompt('a little bit too high, try again');
+    //     parseInt(guess);
+    //   }
+    // }
+    //
+    // document.querySelector('#message').innerHTML = '<h1> Good job m8</h1>';
+
+    // Interest Rate Calculator
+    // var startingBalance = 0, targetBalance = 0, interestRate = 0, n = 0, year = 0, rate = 0;
+    // function populateHtml() {
+    //   document.querySelector('#message').innerHTML = '<ul><li><input type="texarea" '+
+    //   'name="startingBalance" value="starting balance" class="inputs" onclick="clearValue(1)" /></li>'+
+    //   '<li><input type="texarea" name="targetBalance" value="target balance" class="inputs" onclick="clearValue(2)" /></li>'+
+    //   '<li><input type="texarea" name="interestRate" value="interest rate" class="inputs" onclick="clearValue(3)" /></li></ul>' +
+    //   '<button onclick="theButton()">click me</button>'
+    // }
+    // populateHtml();
+    //   function clearValue(n) {
+    //     x = document.querySelectorAll('.inputs');
+    //     for (i = 1; i <= x.length; i++) {
+    //         x[n-1].value = "";
+    //     }
+    //   }
+    //
+    // function theButton(){
+    //   x = document.querySelectorAll('.inputs');
+    //   i = 0;
+    //   startingBalance = parseInt(x[0].value) ;
+    //   targetBalance = parseInt(x[1].value) ;
+    //   interestRate = parseFloat(x[2].value);
+    //   console.log(startingBalance,targetBalance,interestRate, 'button pressed')
+    //   compute();
+    // }
+    //
+    // function compute() {
+    //   while( startingBalance<targetBalance ){
+    //     startingBalance += parseInt(startingBalance * interestRate);
+    //     year += 1;
+    //   }
+    //   console.log('it will take',year,'years to get that moneys')
+    //   console.log('end balacne after ',year, ' years is ',startingBalance);
+    //   year = 0;
+    //
+    // }
+
+  </script>
+</body>
+</html>
