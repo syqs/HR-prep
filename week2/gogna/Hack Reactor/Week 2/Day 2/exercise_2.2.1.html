@@ -1,0 +1,28 @@
+<!-- Duncan Nevin and Shivinder Gogna -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+	<div id='target'>Hello there</div>
+	<button>Button</button> 
+<body>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	<script type="text/javascript">
+
+		var beeper = function(){
+			var node = document.createElement("P");                 
+			var textnode = document.createTextNode("beep");        
+			node.appendChild(textnode);                              
+			document.getElementById("target").appendChild(node); 
+
+			var randomColor = '#' + Math.random().toString(16).slice(2, 8);	
+			$('body').css('background-color', randomColor);
+				
+		};
+
+		document.querySelector('button').addEventListener('click', beeper);
+
+	</script>
+</body>
+</html>

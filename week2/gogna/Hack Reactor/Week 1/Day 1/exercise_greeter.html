@@ -1,0 +1,23 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+	<title>Greeter</title>
+</head>
+<body>
+
+	<div id="greeting"></div>
+		<p>It is so nice to have a visitor from <span id="hometown"></span></p>
+
+	<script type="text/javascript">
+
+		var visitorName = window.prompt("What is your name?")
+		var town = window.prompt("Where were you born?")
+		var welcomeMessage = ("Hello " + visitorName)
+		
+
+		document.querySelector('#greeting').textContent = welcomeMessage
+		document.querySelector('#hometown').textContent = town
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+.title {
+	background-color: lightblue
+}
+.navbar li {
+	display: inline;
+	padding: 10px;
+	background-color: #33bed9;
+}
+.navbar a {
+	color: #ffffff;
+	text-decoration: none;
+	background-color: #B0171F;
+}

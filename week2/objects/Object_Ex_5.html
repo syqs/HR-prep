@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>	<title>greeting</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+</head>
+<body>
+  <h2> The value of color</h2>
+  <div id="special">
+
+  </div>
+  <h2>The key for down</h2>
+  <div id ="where">
+  </div>
+  <h2>The value for target key</h2>
+  <div id ="greet">
+  </div>
+
+<script>
+var dream_life = {
+    job :'developer',
+    car: 'BMW',
+    salary: '$90,000',
+    cat: 'fluffy',
+    house:'5 bedrooms, 2 bathrroms, 2-car gararge',
+    color: "yellow",
+    where:"down",
+
+};
+
+for (var key in dream_life) {
+  	if (key === 'color'){
+  		$('#special').append(dream_life[key]);
+  	};
+}
+
+for (var key in dream_life) {
+  	if (dream_life[key] === 'down'){
+ 		$('#where').append(key);
+  //$('#special').append();
+    };
+}
+
+var target_key = "greeting";
+dream_life[target_key] = target_key;
+for (var key in dream_life){
+  if(dream_life[key] === target_key){
+    $('#greet').append(dream_life[key])
+  };
+
+}
+</script>
+</body>
+</html>

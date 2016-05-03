@@ -1,0 +1,74 @@
+<!--
+Exercise: Learn a little about jQuery Effects Try each of the following:
+
+1. $('h1').show() - convenience method to set element's 'display' property to 'block'
+2. $('p #secret').hide() - set element's 'display' property to 'none'
+3. $('ol li').fadeIn() - fade in a set of matched elements over time
+4. $('p .comments').fadeOut() - fade out as set of matched elements over time
+5. $('div#thing').slideDown() - animate an element sliding down over time
+6. $('#message').slideUp() - animate an element sliding up over time
+7. $('.alert').slideToggle() - toggle between an element sliding up or down over time depending on whether it's visible or not
+-->
+
+<!DOCTYPE html>
+
+<html>
+	
+	<head>
+		<title>jQuery Effects</title>
+		
+		<style>
+			#secret {
+
+			}
+			#thing {
+
+			}
+			.comments {
+
+			}
+			.alert {
+
+			}
+		</style>
+
+	</head>
+	
+	<body>
+		
+		<h1>The Magic Show</h1>
+
+		<p id='secret'>
+			<ol>
+				<li>Fire breathing</li>
+				<li>Card tricks</li>
+				<li>Sword throwing</li>
+			</ol>
+		</p>
+
+		<p class="alert">TOGGLE TOGGLE TOGGLE</p>
+		
+		<p class="comments">THIS IS FADING OUT</p>
+
+		<p id='message'>AHHHHH, I'M SLIDING UP!</p>	
+
+		<div id='thing'>HELP, I'M SLIDING DOWN!</div>
+		
+		<script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+
+		<script type="text/javascript">
+			
+			$('h1').hide();
+			$('h1').show('slow');
+			$('#secret').hide();
+			$('li').fadeIn(8000);
+			$('.comments').fadeOut(7500);
+			$('#thing').slideDown(8000);			
+			$('#message').slideUp(4000);
+			$('.alert').slideToggle(6000);
+
+
+		</script>
+	</body>
+
+</html>

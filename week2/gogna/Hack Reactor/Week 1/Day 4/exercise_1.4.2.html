@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	
+	<head>
+		
+		<title></title>
+	
+	</head>
+	
+	<body>
+		
+		<div id="everything">
+			<h1>A heading!</h1>
+			<p>Here's some text!</p>
+			<p>Here's a second set of text!</p>
+		</div>
+		
+		<div class="holder">
+			<ul>
+				<li>List Item 1</li>
+				<li>List Item 2</li>
+				<li>List Item 3</li>
+			</ul>
+
+		</div>
+		
+		<div class="holder">
+			<ol>
+				<li>List Item 4</li>
+				<li>List Item 5</li>
+				<li>List Item 6</li>
+			</ol>
+		</div>
+		
+		<div id="change-me">This part needs to change!</div>
+		
+		<div id="secret">We should hide this!</div>
+		
+		<!--This is jQuery-->
+		<script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+
+		<script>
+
+			$('h1').css('color', 'blue');
+			$('body').css('background-color', 'grey');
+			$('#everything').css('font-size', '20px');
+			$('.holder').css('border', '1px solid black');
+			$('ul li').css('font-weight', 'bold');
+			$('#everything p').css('color', 'green');
+			$('#secret').css('display', 'none');
+			$('#secret').css('display', 'block');
+			$('#change-me').text('Why hello there');
+			$('#change-me').append(' Please to be here');
+			$('#change-me').html('<p>This is fun</p><p>This is long</p>');
+			$('#change-me').append('<p>This is another paragraph</p>');
+			$('li').text('New sentences');
+			$('li').append(' Newer sentence');
+			$('#everything').append('<ol> <li>Happy 1</li> <li>Happy 2</li> <li>Happy 3</li> </ol>');
+			
+		</script>
+		
+		<!--This is JS-->
+		<script type="text/javascript">
+			var a = 4;
+			console.log(a);
+		</script>
+	
+	</body>
+
+</html>

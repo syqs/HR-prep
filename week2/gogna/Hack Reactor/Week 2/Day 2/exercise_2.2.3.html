@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>	
+	<style>
+
+	</style>
+</head>
+<body>
+
+	<div id="target">Hello World</div>
+	<div id="magic">Pic</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	<script>
+
+		$('#target').on('mouseover', function(){
+			$('#target').addClass('highlighted');
+			$('.highlighted').css('background-color', 'red');
+		})
+		$('#target').on('mouseleave', function(){
+			$('#target').removeClass('highlighted');
+			$('#target').removeAttr('style');
+		});
+
+		$('#magic').on('mouseover', function(){
+			$('#magic').addClass('disappear');
+			$('.disappear').css('height', '800px');
+			$('.disappear').css('background-image', 'url(https://upload.wikimedia.org/wikipedia/commons/2/2e/Margaret_Hamilton.gif)');
+		});
+		$('#magic').on('mouseleave', function(){
+			$('#magic').removeClass('disappear');
+			$('#magic').removeAttr('style');
+		});
+
+	</script>
+
+</body>
+</html>

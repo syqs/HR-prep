@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exercises 4 - rest </title>
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script> -->
+</head>
+<body>
+<script>
+
+var arr = [52, 27,31];
+
+// // pass by reference
+// arr2 = arr;
+// arr2.push(44);
+// arr[0] = "new value";
+//
+// // why?
+// console.log(arr, arr2);
+
+// // what does slice do?   <- excelent example
+// arr2 = arr.slice();
+// arr2.push(44);
+// arr[0] = "new value";
+//
+// // why?
+// console.log(arr, arr2);
+
+
+//another beautiful example
+var arr = [ ['hello', 'and', 'hi'], [2,3,4] ];
+arr2 = arr.slice();
+arr2[1].push(44);
+arr[0] = "new value";
+
+// ?
+console.log(arr,arr2);
+
+
+
+// var myArray = [1,2,3,4,5,6,7,8];
+// var reverser = function (zArray) {
+// 	var newArray = [];
+// 	//since push and pop are mutable functions we have to take into account that the array length changes and compensate
+// 	for (var i = 0; i < (zArray.length+newArray.length); i++){
+// 		newArray.push(zArray.pop());
+// 	}
+// 	return newArray;
+// }
+// console.log(reverser(myArray));
+
+
+// Ex 4 that poem that used to be like i dont like my eggs
+// var str = "one two three";
+// var arr = str.split(' ');
+// var new_str = arr.join(' and a ');
+//
+// // now our turn...
+// var scrambled_poem = "roses red are bacon crispy i bacon love and is blue violets are";
+//
+// var scrambled_array = scrambled_poem.split(' ');
+// var unscrambled_array = [];
+//
+// while(scrambled_array.length > 0) {
+//   unscrambled_array.push(scrambled_array.shift())
+//   unscrambled_array.push(scrambled_array.pop())
+// }
+//
+// unscrambled_array = unscrambled_array.join(' ');
+// console.log(unscrambled_array);
+</script>
+</body>
+</html>

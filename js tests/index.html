@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+<script>
+var r;
+var m = [];
+var fa = [];
+var sa = [];
+var output = [];
+var result =[];
+var result2 =[];
+var result3 = [];
+var theUltimateResult = [];
+  var temp = [];
+  var some = [];
+counter = 0;
+
+function totalChecheker(){
+  for(var i = 0;i<m.length;i++){
+    for(var j= 0;j<result2.length;j++){
+      if(some[j] === m[i].toUpperCase()){
+        theUltimateResult += m[i];
+      }
+    }
+  }
+}
+
+function theJudge(theM) {
+  //check to see if there are same letters in both arrays
+  fa.forEach(function(a,b){
+    //check each element of fa with each element of sa
+    sa.forEach(function(c,d){
+      //if element from second transformed to uppercase is equal to element from first
+      if(c.toUpperCase() === a){
+        //increment output var by a
+        output.push(a);
+      }else if(a.toLowerCase()===c){
+        output.push(c);
+      }
+    })
+  })
+}
+
+//creates a sample of chars that exist in both arrays
+function totalyNewFunction(){
+
+  for (var i = 0;i<result.length;i++){
+        result2.push(result.charAt(i))
+  }
+  some = result2.filter(function(elem, pos) {
+                        return result2.indexOf(elem) == pos;
+                      });
+return some;
+        // for(var m =0;p<result2.length;p++){
+        //   if(result2[p]===result.charAt(i).toUpperCase()){
+        //     continue
+        //   }else{
+        //     some.push(result.charAt(i))
+        //   }
+        // }
+  // if(some.length===0) {
+  //   some.push(result2[0])
+  // }
+  //
+  // for (var j = 0;j<result2.length;j++){
+  //   for (var f = 0; f<temp.length;f++){
+  //     debugger
+  //     if(result2[j]===temp[f]){
+  //        for (var g = 0;g<some.length;g++){
+  //          if(result2[j]===some[g]){
+  //           continue
+  //          }
+  //          some.push(result[j])
+  //        }
+  //     }
+  //   }
+  //}
+}
+  //     debugger
+  //     if(some.length===0) {
+  //       some.push(result2[j])
+  //       continue
+  //     }
+  //     if(result2[j]===temp[f]){
+  //
+  //       for (var g = 0;g<some.length;g++){
+  //           if(result2[j]===some[g]){
+  //             return
+  //           }else{
+  //             some.push(result2[f])
+  //           }
+  //       }
+  //     }else{
+  //       some.push(result2[j])
+  //     }
+  //
+  //     }
+  //   }
+  // }
+  //
+
+function leCompareAndPrint() {
+  output.forEach(function(a,b){
+    if(a.toLowerCase()===fa[b]){
+      return result += fa[b];
+    }else if(a === fa[b]){
+      return result += a;
+    }
+  })
+}
+
+function checkForUppercase(a){
+    if (a ===  a.toUpperCase()) {
+      return true;
+    } else if(a === a.toLowerCase()){
+      return false;
+    }else{
+      throw console.error('the error is thrown');
+    }
+}
+
+function sc(s){
+  //create array from chars
+  for (var i = 0;i<s.length;i++){
+    m.push(s.charAt(i))
+  }
+  //for each elemnt check if is uppercase or lowercase
+  m.forEach(function(a,b){
+      if(a === m[b]){
+        if(checkForUppercase(a)===true){
+          fa.push(a);
+        }else if(checkForUppercase(a)===false)
+          sa.push(a);
+      }
+  })
+  theJudge(m)
+  leCompareAndPrint();
+  some = totalyNewFunction();
+  totalChecheker();
+}
+
+sc('HehOEekeelLKsKoEo')
+console.log(fa,sa)
+</script>
+
+</body>
+
+</html>
+<!--
+// // return a function that returns n
+// var always = function(n) {
+//   return function(){
+//     return n;
+//   }
+// }
+// var four = always(5);
+// four();
+
+
+
+// function zebulansNightmare(f) {
+//   var jo = f.split('_');
+//   var output;
+//   //forEach takes two parameters first is item/value second is index in the array
+//   jo.forEach(function(item, index){
+//     if (index === 0){
+//       output = jo[0];
+//     }else{
+//       item = item.charAt(0).toUpperCase() + item.slice(1);
+//       output += item;
+//     }
+//   });
+//   return output;
+// }
+//
+// zebulansNightmare('camel_case'); -->

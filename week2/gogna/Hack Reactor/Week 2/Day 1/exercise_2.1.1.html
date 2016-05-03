@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	
+	<head>
+
+		<title>"First Function Exercise"</title>
+		<script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+	</head>
+	
+	<body>
+		<div id= "output"></div>
+		
+		
+		
+		<script>
+			var message = function(){
+				console.log("Hello There! The time right now is" + new Date); 
+			};
+			
+			message();
+			
+			var happy = function(){
+				return "I love to code";
+			};
+			$('#output').append(happy);
+
+		</script>
+	
+	</body>
+
+</html>

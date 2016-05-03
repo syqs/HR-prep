@@ -1,0 +1,82 @@
+<!--
+Exercise: Theme Changer
+
+1. Create a web page that asks the user what color theme they'd like to view the web page in.
+2. Keep asking until they enter a valid input (hint: You can end the while loop manually using the break keyword)
+3. Use jQuery to change the css of various elements on the page to use at least three shades of that color. e.g. If they choose "green", show a light green background, with green text and dark green borders
+4. Use jQuery to display a message letting the user know what theme has been applied to the page
+5. Have at least three color schemes for a visitor to choose from (maybe green, blue and red)
+6. Place different images on the page depending on the theme
+7. Extra Credit: Allow the user to enter in a hex value and programmatically create lighter and darker tones of that color.
+-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			
+		</title>
+
+	</head>
+
+	<body>
+		
+		<h1>THIS IS THE HEADER</h1>
+
+	    <div>
+	      <ul>
+	        <title>Cars</title>
+	        <li>Viper</li>
+	        <li>Passat</li>
+	        <li>Jetta</li>
+	      </ul>
+	    </div>
+
+	    <img src=""/>
+
+		<script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+
+		<script type="text/javascript">
+			
+			while (true) {
+				var userAnswer = prompt("User, what theme would you like to view this webpage in?");
+        		if (userAnswer.toLowerCase() === "green") {
+              		window.alert("Great! Green is wonderful!");
+              		var greenUl = prompt("What color should the list be? (hex dec color only)");
+              		$('div ul').css('color', greenUl);
+              		var greenBody = prompt("What color should the body be? (hex dec color only)");
+	              	$('body').css('background-color', greenBody);
+	              	var greenH1 = prompt("What color should the header be? (hex dec color only)");
+	              	$('h1').css('color', greenH1);
+	              	$('img').attr('src', 'http://cdn.phys.org/newman/gfx/news/hires/2014/1-newstaugusti.jpg');
+                  	break;
+				} else if (userAnswer.toLowerCase() === "blue") {
+					window.alert("Blue is beautiful like the ocean!");
+					var blueUl = prompt("What color should the list be? (hex dec color only)");
+					$('div ul').css('color', blueUl);
+					var blueBody = prompt("What color should the list be? (hex dec color only)");
+		            $('body').css('background-color', blueBody);
+		            var blueH1 = prompt("What color should the list be? (hex dec color only)");
+		            $('h1').css('color', blueH1);
+		            $('img').attr('src', 'https://static.pexels.com/photos/6644/sea-water-ocean-waves.jpg');
+					break;
+				} else if (userAnswer.toLowerCase() === "red") {
+					window.alert("Red is cool but cops pull red cars over a lot!");
+					var redUl = prompt("What color should the list be? (hex dec color only)");
+					$('div ul').css('color', redUl);
+					var redBody = prompt("What color should the list be? (hex dec color only)");
+                    $('body').css('background-color', redBody);
+                    var redH1 = prompt("What color should the list be? (hex dec color only)");
+                    $('h1').css('color', redH1);
+                    $('img').attr('src', 'http://www.blogcdn.com/slideshows/images/slides/355/296/9/S3552969/slug/l/02-2016-dodge-viper-acr-fd-1.jpg');
+					break;
+				} else {
+            		window.alert("That is not a valid theme, please green, blue, or red.");			
+            		continue;
+				}
+			}
+
+		</script>
+	</body>
+
+</html>

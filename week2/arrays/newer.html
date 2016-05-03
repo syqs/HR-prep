@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exercises 1-3</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+</head>
+<body>
+<div id="bucket_output"></div>
+<div id="recipe_output"></div>
+
+<script>
+var recipe = ["break egg", "cook egg", "eat the egg"];
+var bucket_list = ["learn javascript","master flying"];
+bucket_list.push("string value 1", "value 2")
+bucket_list.unshift("stirngy 1","stringy2")
+var dying_wish = bucket_list.pop();
+var do_it_now = bucket_list.shift();
+console.log(bucket_list)
+console.log(dying_wish)
+function append_strings (array, target){
+	var i = 0
+	while(i < array.length){
+		$(target).append("<p>" + array[i] + "</p>");
+		i++;
+	}
+}
+append_strings(bucket_list, "#bucket_output");
+append_strings(recipe,'#recipe_output');
+</script>
+</body>
+</html>

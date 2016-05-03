@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div id="lyrics">Happy</div>
+	<script type="text/javascript">
+	// Part 1
+	// 	var n = 0;
+	// 	console.log('I am called the COunrt... because I really love to count!');
+	// 	while (n < 50) {
+	// 		console.log(n, 'ha-ha-ha');
+	// 		n+=2;
+	// 	}
+	// 	console.log('fin!');
+	// Part 2
+	// var n = 100, song = '';
+	// while (n >= 0) {
+	// 	if (n !== 0) {
+	// 		song = song + ' ' + n + " bottles of beer on the wall! Chug, chug, chug";
+	// 	} else {
+	// 		song+= " no bottles of beer! Stumble, stumble, stumble...";
+	// 	}
+	// 	n--;
+	// }
+	// document.querySelector('#lyrics').textContent = song;
+	//Part 3
+	var n = 100, song = '<ul class=lyrics>';
+	while (n >= 0) {
+		if (n !== 0) {
+			song = song + '<li>' + n + " bottle" + (n === 1 ? '' : 's') + " of beer on the wall! Chug, chug, chug</li>";
+		} else {
+			song += "<li>no bottles of beer! stumble, stumble, stumble... </li>";
+		}
+		n--;
+	}
+	song += "</ul>"
+
+	document.querySelector('#lyrics').innerHTML = song;
+	</script>
+</body>
+</html>

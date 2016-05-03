@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+</head>
+
+<body>
+    <div id="bucket_output" style="background-color: red"></div>
+    <div id="recipe_output" style="background-color: green"></div>
+    <script type="text/javascript">
+    var bucket_list = [];
+    bucket_list[0] = "travel";
+    bucket_list[1] = "build car";
+    bucket_list.push("race cars");
+    bucket_list.push("Japan");
+    bucket_list.unshift("Get into HR")
+    bucket_list.unshift("Learn about coding")
+        // var dying_wish = bucket_list.pop();
+        // var do_it_now = bucket_list.shift();
+
+    var recipe = [];
+    recipe[0] = "Egg";
+    recipe[1] = "Milk";
+    recipe[2] = "Sugar";
+    recipe[3] = "Flour";
+
+    var append_strings = function(array, output) {
+        var index = 0;
+        while (index < array.length) {
+            $('#' + output).append('<div>' + array[index] + '</div>');
+            index++;
+        }
+    };
+
+    append_strings(recipe, "recipe_output");
+    append_strings(bucket_list, "bucket_output");
+    </script>
+</body>
+
+</html>

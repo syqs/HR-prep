@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		
+	</title>
+</head>
+<body>
+	
+	<div class='target'>Happy</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+
+	<script type="text/javascript">
+		var elFinder = function(event) {
+			console.log('calling elFinder for:', this, event.target)
+		};
+
+		$('div').click(elFinder);
+	</script>
+</body>
+</html>

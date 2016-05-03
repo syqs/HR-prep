@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+	<body>
+		<script>
+		
+		var logAndReturn = function(){
+    		console.log(arguments);
+    		return arguments;
+		};
+		
+		var returnedValues = logAndReturn("hello", "goodbye");
+		
+		logAndReturn(returnedValues);
+
+		</script>
+	</body>
+</html>

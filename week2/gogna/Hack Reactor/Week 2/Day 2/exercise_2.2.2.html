@@ -1,0 +1,45 @@
+<!-- Duncan Nevin and Shivinder Gogna -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div id="target1">Show me the money</div>
+	<div id="target2">Show me the Oprah</div>
+	<div id="target3">Show me the Opera</div> -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	<script type="text/javascript">
+
+		var tShown1 = true,
+		tShown2 = true,
+		tShown3 = true;
+
+		$('#target1').on('click', function(){
+			$(this).text('Show them the money!');
+			if(tShown2 === false && tShown3 === false){
+				$('#target2').hide();
+				$('#target3').hide();
+			}
+			tShown1 = false;
+		});
+		$('#target2').on('click', function(){
+			$(this).text('Show them the Oprah!');
+			if(tShown1 === false && tShown3 === false){
+				$('target1').hide();
+				$('target3').hide();
+			}
+			tShown2 = false;
+		});
+		$('#target3').on('click', function(){
+			$(this).text('Show them the Opera!');
+			if(tShown1 === false && tShown2 === false) {
+				$('target1').hide();
+				$('target2').hide();
+			}
+			tShown3 = false;
+		});
+
+	</script>
+</body>
+</html>

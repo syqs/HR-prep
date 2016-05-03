@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+	
+	<head>
+		
+		<title></title>
+		<style>
+			#notification {
+
+			}
+			.container {
+
+			}
+		</style>
+	</head>
+	
+	<body>
+		<img src=""/>
+    	
+    	<h1></h1>
+		
+		<div id="notification">HELLO</div>
+		<div class="container">WE ARE WORKING</div>
+		  
+		<script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+		<script>
+			$('body').css('background-color', 'red');
+			$('img').attr('src','http://i.imgur.com/nWGCwiE.gif');
+    
+			$('h1').text('hello');
+			$('#notification').html('<div class="alert">Hold on! <b>an error</b> has occured!</p>');
+			$('.container').append("<p>What's the difference between <i>.append()</i> and .html()?</p>");
+		</script>
+
+	</body>
+
+</html>
