@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Theme Changer</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <style>
+    .headerImage{
+      width: 100%;
+/*      height: 8em;*/
+    }
+  </style>
+
+</head>
+<body>
+<header id="header">
+  
+</header>
+
+<div id="everything">
+      <h1>A heading!</h1>
+      <p>Here's some text!</p>
+      <p>Here's a second set of text!</p>
+      <div id="firstHolder" class="holder">
+          <ul>
+              <li>List Item 1</li>
+              <li>List Item 2</li>
+              <li>List Item 3</li>
+          </ul>
+      </div>
+      <div class="holder">
+          <ol>
+              <li start="some">List Item 4</li>
+              <li start="list item 5">List Item 5</li>
+              <li>List Item 6</li>
+          </ol>
+      </div>
+      <div id="change-me">This part needs to change!</div>
+      <div id="secret">We should hide this!</div>
+  </div>
+
+<script>
+
+ var color;
+ var token = true;
+
+// there is an issue with images.. but thats no biggie 
+//Awesome Thanks! I wondered if the images would show up for you guys since they are local to my machine. 
+//yea imgs dont get shared over floobits.. they possibly can... but not by default means
+//gotcha. I can send them to you if you want to check them out. 
+
+//That's a good idea. I've neve done that before. Awesome. I'll do that
+// i sorta solved the lighter and darker colors but its still buggy and in need of refactoring
+//Thats cool I'll take a look, its not up yet.. well.. its on git, speaking of witch :) we should do like commits to each others git eventually for good messure :)
+//like you could do this as a 
+// great Idea I need to work with git. I haven't done much on it. 
+//its next on schedule.. did you notice the chat underneath?
+
+
+i will try something now.. it might delete this .. it shouldnt.. but i copy it anyways :D
+
+    while(token === true){
+       color = prompt("What color theme would you like to view Gray, Green, or Blue?");
+
+        if (color === "gray" || color === "green" || color === "blue"){
+          token = false
+
+          
+          //            *** Theme Changer ***
+
+          var colorBG = "light" + color;
+          var colorTxt = color;
+          var colorBorder = "dark" + color;
+          var themeChoice = "<h1>This is the " + color + " theme<h1>";
+
+          $('#firstHolder').prepend(themeChoice)
+          $('ol, #firstHolder').css('border-style', 'solid');
+          $('.holder').css('background-color', colorBG);
+          $('.holder').css('color', colorTxt);
+          $('ol, #firstHolder').css('border-color', colorBorder);
+          
+          
+          //            *** header Image Changer ***
+
+          if (color === "blue"){
+          
+              $('#header').html("<img class=\"headerImage\" src=\"http://www.images/blueTheme.png\" alt=\"blue header image\" style=\"width\" />");
+          }
+          else if(color === "gray"){
+              $('#header').html("<img class=\"headerImage\" src=\"images/grayTheme.png\" alt=\"gray header image\" />");
+          }
+          else{
+            $('#header').html("<img class=\"headerImage\" src=\"images/greenTheme.png\" alt=\"green header image\" />");
+          }
+        } 
+
+        else{
+           console.log("pick one of the listed colors");
+           alert("Please enter a listed color")
+      
+
+        }
+
+      }
+
+
+</script>
+</body>
+</html>
